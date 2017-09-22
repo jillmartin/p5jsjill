@@ -7,28 +7,36 @@
     </body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
     <script type="text/javaScript">
-      var i = 0;
+
+    //  var canvas = 640;
+      var moveAll = 0;
+
       function setup() {
         createCanvas(640, 480);
-
+        moveAll = 100;
       }
-
 
       function draw() {
+        background('gray');
+        //road
+        noStroke();
         fill('black');
         rect(0, 400, 640, 80);
-        ellipse(i + 11, 390, 20, 20);
-        ellipse(i + 51, 390, 20, 20);
+        //car
+        noStroke();
+        beginShape();
+        ellipse(moveAll + 11, 390, 20, 20);
+        ellipse(moveAll + 51, 390, 20, 20);
         fill('blue');
-        rect(i + 0, 340, 61, 40);
+        rect(moveAll + 0, 340, 61, 40);
+        endShape(CLOSE);
 
-      /*  for (i = 0; i <= 640; i + 5){
-          if (i = 640);
-          i = 5;
-        } */
-        i = i + 5;
-      }
+        //moveAll++;
+        moveAll = moveAll + 5;
+      if (moveAll >= 640) {
+        moveAll = 0;
+        }
 
-
+}
     </script>
 </html>

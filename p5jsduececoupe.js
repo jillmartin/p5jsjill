@@ -1,17 +1,17 @@
+
+
 function setup() {
   createCanvas(800, 400);
   background('#2B65EC');
-
-
 }
 function draw() {
-  //touches(400, 200);
-
+//road
   fill('#34282C'); //road color
   rect(0, 300, 800, 100); //road
 
   fill('#FCDB32');
   ellipse(75, 100, 75, 75);
+
 //trailer tires
   fill('#34282C'); //tire color
   ellipse(200, 280, 40, 40); //left tire
@@ -39,7 +39,6 @@ function draw() {
   fill('#FFFFFF');
   arc(650, 175, 80, 80, HALF_PI, PI);
 
-
 //truck tires
   fill('#34282C'); //tire color
   ellipse(500, 275, 50, 50); //left tire
@@ -48,8 +47,4 @@ function draw() {
   ellipse(500, 275, 25, 25); //left tire center
   ellipse(600, 275, 25, 25); //right tire center
 
-}
-
-function draw() {
-  
 }
