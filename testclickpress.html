@@ -1,0 +1,87 @@
+<html>
+    <head>
+      <title> test </title>
+    </head>
+    <body>
+
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
+    <script type="text/javaScript">
+
+      var moveAll;
+      var honk = 'gray';
+      var honk2 = 'gray';
+      var honk3 = 'gray';
+      var x = 100;
+
+      function setup() {
+        createCanvas(640, 480);
+        moveAll = 0;
+      }
+
+      function draw() {
+        background('gray');
+        //road
+        noStroke();
+        fill('black');
+        rect(0, 400, 640, 80);
+        //car
+        noStroke();
+        beginShape();
+        ellipse(moveAll + 111, 390, 20, 20);
+        ellipse(moveAll + 151, 390, 20, 20);
+        fill('blue');
+        rect(moveAll + 100, 340, 61, 40);
+        endShape(CLOSE);
+        //honk text
+        fill(honk);
+        //rect(25, 25, 50, 50);
+        text("Honk!!!", 50, 100);
+        textSize(40);
+
+        fill(honk2);
+        //rect(25, 25, 50, 50);
+        text("Honk!!!", 100, 200);
+        textSize(40);
+
+        fill(honk3);
+        //rect(25, 25, 50, 50);
+        text("Honk!!!", 200, 300);
+        textSize(40);
+
+// create continuous loop of car on road
+//        moveAll = moveAll + 5;
+//      if (moveAll >= 640) {
+//        moveAll = 0;
+//        }
+
+    }
+
+      function keyPressed() {
+        if (keyCode === LEFT_ARROW) {
+        moveAll = moveAll - 5;
+        } else if (keyCode === RIGHT_ARROW) {
+        moveAll = moveAll + 5;
+        }
+    }
+
+      function mouseClicked() {
+        if (honk === 'gray') {
+          honk = '#FCDB32';
+        } else if (honk2 === 'gray') {
+          honk2 = '#FCDB32';
+        } else if (honk3 === 'gray') {
+          honk3 = '#FCDB32';
+        } else {
+          honk = 'gray';
+          honk2 = 'gray';
+          honk3 = 'gray';
+        }
+      }
+
+    </script>
+</html>
+
+<!--random x number-->
+<!-- random y number-->
+<!-- google random x number for canvas / bubble around the honk--> 
