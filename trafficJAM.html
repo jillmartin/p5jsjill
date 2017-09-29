@@ -1,0 +1,76 @@
+<html>
+    <head>
+      <title> TJAMMIN' </title>
+    </head>
+    <body>
+
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
+    <script type="text/javaScript">
+
+      var moveAll;
+      var drawCarX = 0;
+      var x = 0;
+
+
+      function setup() {
+        createCanvas(640, 480);
+        moveAll = 0;
+        x = 0;
+      }
+
+      function draw() {
+        //background
+        background('gray');
+        //sun
+        fill('yellow');
+        ellipse(0, 46, 55, 55);
+
+
+        //road
+        noStroke();
+        fill('black');
+        rect(0, 400, 640, 80);
+
+        car(0);
+        car(100);
+        car(200);
+        car(300);
+        car(400);
+        car(500);
+        car(600);
+
+
+      function keyPressed() {
+        if (keyCode === RETURN) {
+      return car();
+        }
+      }
+    }
+
+      function car(drawCarX) {
+      //car
+      noStroke();
+      fill('black');
+      ellipse(moveAll + 111 + drawCarX, 390, 20, 20);
+      ellipse(moveAll + 151 + drawCarX, 390, 20, 20);
+      fill('blue');
+      rect(moveAll + 100 + drawCarX, 340, 61, 40);
+      };
+
+      function keyPressed() {
+        if (keyCode === LEFT_ARROW) {
+          moveAll = moveAll - 5;
+          } else if (keyCode === RIGHT_ARROW) {
+            moveAll = moveAll + 5;
+          }
+      }
+
+
+
+
+
+
+
+    </script>
+</html>
